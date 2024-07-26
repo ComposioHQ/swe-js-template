@@ -1,3 +1,7 @@
+
+import dotenv from "dotenv";
+dotenv.config({ path: "../.env" });
+
 import { fromGithub, getBranchNameFromIssue } from './utils';
 import { initSWEAgent } from './agents/swe';
 import { GOAL } from './prompts';
