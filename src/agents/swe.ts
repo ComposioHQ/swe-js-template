@@ -1,11 +1,6 @@
-
-import dotenv from 'dotenv';
-dotenv.config();
-
-import { ExecEnv, OpenAIToolSet, Workspace } from 'composio-core';
+import { OpenAIToolSet, Workspace } from 'composio-core';
 import { BACKSTORY, DESCRIPTION, GOAL } from '../prompts';
 import OpenAI from 'openai';
-import { v4 } from 'uuid';
 
 // Initialize tool.
 const llm = new OpenAI({

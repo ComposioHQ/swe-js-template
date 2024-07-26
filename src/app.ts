@@ -5,7 +5,6 @@ dotenv.config({ path: "../.env" });
 import { fromGithub, getBranchNameFromIssue } from './utils';
 import { initSWEAgent } from './agents/swe';
 import { GOAL } from './prompts';
-import { OpenAIToolSet, Workspace } from 'composio-core';
 
 async function main() {
   /**Run the agent.**/
