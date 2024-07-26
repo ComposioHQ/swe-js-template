@@ -79,3 +79,6 @@ export async function fromGithub(toolset: ComposioToolSet): Promise<{ repo: stri
   return { repo, issue };
 }
 
+export function getBranchNameFromIssue(issue: string): string {
+  return "swe/" + issue.toLowerCase().replace(/\s+/g, '-') + "-" + nanoid();
+}
