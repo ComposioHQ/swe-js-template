@@ -59,6 +59,8 @@ async function main() {
   } else {
     console.log('No output available - no patch was generated :(');
   }
+
+  await composioToolset.workspace.close();
 }
 
 main();
