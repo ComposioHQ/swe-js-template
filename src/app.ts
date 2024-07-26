@@ -9,7 +9,9 @@ import { GOAL } from './prompts';
 async function main() {
   /**Run the agent.**/
   const { assistantThread, llm, tools, composioToolset } = await initSWEAgent();
-  const { repo, issue } = await fromGithub(composioToolset);
+  // const { repo, issue } = await fromGithub(composioToolset);
+  const repo = "ComposioHQ/composio";
+  const issue = "add eslint checks in JS SDK";
 
   const assistant = await llm.beta.assistants.create({
     name: "SWE agent",

@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as readline from 'readline';
 import { ComposioToolSet } from "composio-core/lib/sdk/base.toolset";
+import { nanoid } from "nanoid";
 
 type InputType = any;
 

@@ -6,7 +6,11 @@ import OpenAI from 'openai';
 const llm = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
-const composioToolset = new OpenAIToolSet({ workspaceConfig: Workspace.Docker() });
+const composioToolset = new OpenAIToolSet({ 
+    workspaceConfig: Workspace.E2B({
+        apiKey: process.env.E2B_API_KEY,
+    })
+});
 
 export async function initSWEAgent(): Promise<{composioToolset: OpenAIToolSet; assistantThread: OpenAI.Beta.Thread; llm: OpenAI; tools: Array<any>}> {
     let tools = await composioToolset.getTools({
