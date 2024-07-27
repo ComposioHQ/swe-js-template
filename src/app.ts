@@ -56,6 +56,8 @@ async function main() {
       base: "master",
       title: `SWE: ${issue}`
     })
+
+    console.log("Done! The PR has been created for this issue in " + repo);
   } else {
     console.log('No output available - no patch was generated :(');
   }
