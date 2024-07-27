@@ -68,7 +68,7 @@ export async function fromGithub(toolset: ComposioToolSet): Promise<{ repo: stri
   const name = await readUserInput(
     'Enter github repository name',
     'github repository name',
-    githubRepositoryNameValidator
+    (value: string) => value
   );
   const repo = `${owner}/${name.replace(",", "")}`;
   const issue = await readUserInput(
