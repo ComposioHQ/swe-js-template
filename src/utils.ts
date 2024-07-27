@@ -70,7 +70,7 @@ export async function fromGithub(toolset: ComposioToolSet): Promise<{ repo: stri
     'github repository name',
     githubRepositoryNameValidator
   );
-  const repo = `${owner}/${name}`;
+  const repo = `${owner}/${name.replace(",", "")}`;
   const issue = await readUserInput(
     'Enter github issue ID or description or path to the file containing description',
     'github issue',
